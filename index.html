@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>stringhub - Trang chủ</title>
+  <link rel="stylesheet" href="/css/index.css" />
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/account-menu.css">
+  <link rel="stylesheet" href="/css/search-style.css">
+</head>
+
+<body>
+  <header>
+    <div class="header-container">
+      <a href="/html/index.html">STRINGHUB</a>
+    </div>
+    <div class="navbar-container">
+      <a href="./contact.html">LIÊN HỆ</a>
+      <a href="https://discord.com/channels/1505207735669620828/1505207736537972738">CỘNG ĐỒNG</a>
+      <a href="">SHEET NHẠC</a>
+      <a href="./donation.html">QUYÊN GÓP</a>
+      <a href="./report.html">BÁO CÁO</a>
+      <a href="./suggest.html">Ý TƯỞNG</a>
+      <a href="./feedback.html">PHẢN HỒI</a>
+      <div class="cart-menu"> 
+
+        <button id="cartBtn">
+          🛒
+          <span id="cartCount">0</span>
+        </button>
+
+        <div class="cart-dropdown hidden" id="cartDropdown">
+
+          <div id="cartItems">
+
+            <!-- render bằng JS -->
+
+          </div>
+
+          <div class="cart-footer">
+
+            <h3 id="cartTotal">
+              Tổng: 0đ
+            </h3>
+
+            <a href="/html/cart.html">
+              Xem giỏ hàng
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+      <div class="search-box">
+
+        <input type="search" id="searchInput" placeholder="Tìm kiếm nhạc cụ..." />
+
+        <div class="search-dropdown hidden" id="searchDropdown">
+        </div>
+
+      </div>
+      <div class="account-menu">
+
+        <button id="accountBtn">
+          Tài khoản
+        </button>
+
+        <div class="dropdown hidden" id="dropdownMenu">
+
+          <a href="/html/CRUD.html" id="adminLink" class="hidden">
+            Admin Panel
+          </a>
+
+          <button id="btnLogout">
+            Đăng xuất
+          </button>
+
+        </div>
+
+      </div>
+    </div>
+  </header>
+  <main>
+    <p style="padding: 20px; font-size: 30px;">DANH MỤC</p>
+    <div class="category">
+      <div class="category-card">
+        <img
+          src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTAQmPK9R3RCW4oCXH2fNC-8IaTyjdxzxmGaSzF2iIOGtC0uI07PfTqqNuiebAbTxICjs2dnfUqNwIRUTSCE66SF1gQ3Xlau860WPOYdCNv"
+          alt="Organ" />
+        <p>ORGAN</p>
+
+        <a href="/html/piano-organ.html">>> Xem chi tiết</a>
+      </div>
+      <div class="category-card">
+        <img
+          src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcR9S3ecTRCmv1QO1OG-23OdgsS8-uaZjm9Y-sFFWMpATwaeK1zO2AJIThK59abtR31dsJO4LAIuJ3yCECvX5vdjClMJv6PivxUYRrZOdd884Xp-rOS5XjkiFg"
+          alt="Organ" />
+        <p>PIANO CƠ</p>
+
+        <a href="/html/piano-co.html">>> Xem chi tiết</a>
+      </div>
+      <div class="category-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQw3vil0PjDSg3Oq1YT9PP0PyvHP7VyQnR_Dg&s"
+          alt="Organ" />
+        <p>PIANO ĐIỆN</p>
+        <a href="/html/piano-dien.html">>> Xem chi tiết</a>
+      </div>
+      <div class="category-card">
+        <img
+          src="https://p16-oec-va.ibyteimg.com/tos-maliva-i-o3syd03w52-us/b21f261530174646985f322dcb95b7fe~tplv-o3syd03w52-resize-webp:800:800.webp?dr=15592&t=555f072d&ps=933b5bde&shp=8dbd94bf&shcp=e1be8f53&idc=my&from=2378011839"
+          alt="Organ" />
+        <p>PHỤ KIỆN</p>
+        <a href="/html/piano-accessories.html">>> Xem chi tiết</a>
+      </div>
+    </div>
+    </div>
+    <p style="padding: 20px; font-size: 30px;">SẢN PHẨM THỊNH HÀNH</p>
+    <div class="featured-products">
+      <!-- <div class="product-card">
+          <a href="">
+            <img
+              src="data:image/webp;base64,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"
+              alt="Organ"
+            />
+            <h3>Đàn Organ Yamaha PSR-E373</h3>
+            <p>Đàn xịn chất lượng</p>
+            <p style="font-weight: bold">Giá: 15,000,000 VND</p>
+          </a>
+        </div> -->
+    </div>
+    <p></p>
+    <script>
+      (function () {
+        if (
+          !window.chatbase ||
+          window.chatbase("getState") !== "initialized"
+        ) {
+          window.chatbase = (...args) => {
+            if (!window.chatbase.q) {
+              window.chatbase.q = [];
+            }
+            window.chatbase.q.push(arguments);
+          };
+          window.chatbase = new Proxy(window.chatbase, {
+            get(target, prop) {
+              if (prop === "q") {
+                return target.q;
+              }
+              return (...args) => target(prop, ...args);
+            },
+          });
+        }
+        const onLoad = function () {
+          const script = document.createElement("script");
+          script.src = "https://www.chatbase.co/embed.min.js";
+          script.id = "-8FDhZM1WwvtHXXjeS1sl";
+          script.domain = "www.chatbase.co";
+          document.body.appendChild(script);
+        };
+        if (document.readyState === "complete") {
+          onLoad();
+        } else {
+          window.addEventListener("load", onLoad);
+        }
+      })();
+    </script>
+  </main>
+  <footer>
+    <div class="footer-wrapper">
+      <div class="footer-container">
+        <div class="footer-top">
+          <h2>STRINGHUB</h2>
+          <p>Nơi phân phối nhạc cụ chất lượng cao</p>
+        </div>
+
+        <div class="footer-content">
+          <div>
+            <a href="/html/about-us.html">
+              <h4>Về chúng tôi</h4>
+            </a>
+            <p>
+              Chúng tôi là một công ty chuyên bán nhạc cụ với chất lượng cao
+              và dịch vụ tốt nhất.
+            </p>
+          </div>
+
+          <div>
+            <a href="/html/contact.html">
+              <h4>Liên hệ</h4>
+            </a>
+            <p>0705567593</p>
+          </div>
+
+          <div>
+            <h4>Địa chỉ</h4>
+            <p>Hẻm 355 ,Phú Hòa Đông ,Củ Chi ,Tp HCM</p>
+          </div>
+
+          <div>
+            <h4>MXH</h4>
+            <a href="https://www.facebook.com" target="_blank">
+              <h4>Facebook</h4>
+            </a><br />
+            <a href="https://www.instagram.com" target="_blank">
+              <h4>TikTok</h4>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script type="module" src="/js/index.js"></script>
+  <script src="/js/index.js"></script>
+  <script type="module" src="/js/auth.js"></script>
+  <script type="module" src="/js/search.js"></script>
+  <script type="module" src="/js/cart.js"></script>
+</body>
+
+</html>
