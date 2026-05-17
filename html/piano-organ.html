@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Organ - stringhub</title>
+    <link rel="stylesheet" href="/css/piano-product.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/search-style.css" />
+    <link rel="stylesheet" href="/css/account-menu.css">
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <a href="/html/index.html">STRINGHUB</a>
+      </div>
+      <div class="navbar-container">
+        <a href="">LIÊN HỆ</a>
+        <a href="">CỘNG ĐỒNG</a>
+        <a href="">SHEET NHẠC</a>
+        <div class="cart-menu"> 
+
+        <button id="cartBtn">
+          🛒 Giỏ hàng
+          <span id="cartCount">0</span>
+        </button>
+
+        <div class="cart-dropdown hidden" id="cartDropdown">
+
+          <div id="cartItems">
+
+            <!-- render bằng JS -->
+
+          </div>
+
+          <div class="cart-footer">
+
+            <h3 id="cartTotal">
+              Tổng: 0đ
+            </h3>
+
+            <a href="/html/cart.html">
+              Xem giỏ hàng
+            </a>
+
+          </div>
+
+        </div>
+
+        </div>
+        <div class="search-box">
+
+          <input
+            type="search"
+            id="searchInput"
+            placeholder="Tìm kiếm nhạc cụ..."
+          />
+
+          <div
+            class="search-dropdown hidden"
+            id="searchDropdown">
+          </div>
+
+        </div>
+        <div class="account-menu">
+
+          <button id="accountBtn">
+            Tài khoản
+          </button>
+
+          <div class="dropdown hidden" id="dropdownMenu">
+
+            <a href="/html/CRUD.html"
+              id="adminLink"
+              class="hidden">
+              Admin Panel
+            </a>
+
+            <button id="btnLogout">
+              Đăng xuất
+            </button>
+
+          </div>
+
+        </div>
+      </div>
+    </header>
+    <main>
+      <p style="padding: 20px; font-size: 30px;">CÁC LOẠI ORGAN CHẤT LƯỢNG NHẤT</p>
+      <div class="product-container"></div>
+
+      <script type="module" src="/js/loadCategory.js"></script>
+      <script type="module" src="/js/search.js"></script>
+    </main>
+    <footer>
+      <div class="footer-wrapper">
+        <div class="footer-container">
+          <div class="footer-top">
+            <h2>STRINGHUB</h2>
+            <p>Nơi phân phối nhạc cụ chất lượng cao</p>
+          </div>
+
+          <div class="footer-content">
+            <div>
+              <h4>Về chúng tôi</h4>
+              <p>
+                Chúng tôi là một công ty chuyên bán nhạc cụ với chất lượng cao
+                và dịch vụ tốt nhất.
+              </p>
+            </div>
+
+            <div>
+              <h4>Liên hệ</h4>
+              <p>0705567593</p>
+            </div>
+
+            <div>
+              <h4>Địa chỉ</h4>
+              <p>Hẻm 355 ,Phú Hòa Đông ,Củ Chi ,Tp HCM</p>
+            </div>
+
+            <div>
+              <h4>MXH</h4>
+              <a href="https://www.facebook.com" target="_blank">Facebook</a
+              ><br />
+              <a href="https://www.instagram.com" target="_blank">Instagram</a>
+            </div>
+            <div class="footer-bottom">
+              <a href="/html/contact.html">CONTACT</a>
+              <a href="/html/report.html">REPORT</a>
+              <a href="/html/suggest.html">SUGGEST</a>
+              <a href="/html/feedback.html">FEEDBACK</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

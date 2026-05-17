@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Suggest | AQUAMEN</title>
+</head>
+<body>
+<h2>💡 Đề xuất ý tưởng</h2>
+
+<form onsubmit="sendSuggest(event)">
+  <label>Tên bạn:</label>
+  <input type="text" required>
+
+  <label>Bạn muốn đề xuất:</label>
+  <textarea placeholder="Ví dụ: Thêm wiki nhạc cụ..." required></textarea>
+
+  <button type="submit">Gửi đề xuất</button>
+</form>
+
+<script>
+function sendSuggest(e){
+  e.preventDefault();
+  alert("🌱 Cảm ơn ý tưởng của bạn!");
+}
+</script>
+</body>
+</html>

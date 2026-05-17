@@ -1,0 +1,76 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* CONTAINER CHIA 2 */
+.container {
+  display: flex;
+  height: 100vh;
+}
+
+/* LEFT IMAGE */
+.left {
+  flex: 1;
+  background-image: url("/image/image.png");
+  background-size: cover;
+  background-position: center;
+}
+
+/* RIGHT FORM */
+.right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #5c5c5c;
+}
+
+/* FORM */
+.form-wrapper {
+  width: 350px;
+  color: white;
+}
+
+.form-wrapper h2 {
+  margin-bottom: 20px;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.form-control input {
+  padding: 10px;
+  border: none;
+  outline: none;
+  margin-top: 5px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background: #cccccc;
+  border: none;
+  color: white;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.form-help {
+  margin-top: 10px;
+}
+
+a {
+  color: #ffffff;
+}

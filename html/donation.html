@@ -1,0 +1,132 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>Quyên góp | STRINGHUB</title>
+  <link rel="stylesheet" href="../css/donation.css" />
+
+
+</head>
+<body>
+  <header>
+    
+    <!-- TOP -->
+        <div class="top">
+            <!-- <a href="">
+                <img src="/logo/ChatGPT Image 14_38_29 4 thg 1, 2026.png" alt="">
+            </a> -->
+            
+        </div>
+
+        <!-- NAVBAR -->
+        <div class="navbar">
+            <div class="navbar-container">
+        <a href="./contact.html">LIÊN HỆ</a>
+        <a href="./"></a>
+        <a href="">CỘNG ĐỒNG</a>
+        <a href="">SHEET NHẠC</a>
+        <a href="./shop.html">GIỎ HÀNG</a>
+        <input type="search" placeholder="Tìm kiếm nhạc cụ ...." />
+      </div>
+
+        </div>
+        <h1>Quyên góp giúp đỡ người nghèo có ước mơ ca hát & phát triển tài năng</h1>
+        <p>STRINGHUB – Chung tay phát triển ước mơ-Mỗi đơn hàng trích 2% vào quỹ “Chạm tới ước mơ âm nhạc”</p>
+  </header>
+
+  <div class="container">
+    <h2>Thông tin quyên góp</h2>
+
+    <label>username</label>
+    <input type="text" id="name" placeholder="username" />
+
+    <label>Số tiền quyên góp (VNĐ)</label>
+    <input type="number" id="amount" placeholder="Ví dụ: 50000" />
+
+    <label>Lý do quyên góp</label>
+    <select id="reason">
+      <option> giúp người nghèo có thể học free</option>
+      <option> muốn tăng cường phát triển nhân tài</option>
+      <option> muốn hỗ trợ cho đất nước tốt đẹp</option>
+      <option>Lý do khác</option>
+    </select>
+
+    <label>Lời nhắn</label>
+    <textarea id="message" rows="4" placeholder="Lời nhắn của bạn..."></textarea>
+
+    <button onclick="donate()">Quyên góp ngay</button>
+
+    <p class="success" id="successMsg">✅ Cảm ơn bạn đã quyên góp cho STRINGHUB!</p>
+  </div>
+
+  <script>
+    function donate() {
+      const name = document.getElementById('name').value;
+      const amount = document.getElementById('amount').value;
+
+      if (name === '' || amount === '') {
+        alert('Vui lòng nhập đầy đủ thông tin!');
+        return;
+      }
+
+      document.getElementById('successMsg').style.display = 'block';
+
+      // lưu database
+      console.log({
+        name: name,
+        amount: amount,
+        reason: document.getElementById('reason').value,
+        message: document.getElementById('message').value
+      });
+    }
+  </script>
+  <footer>
+      <div class="footer-wrapper">
+        <div class="footer-container">
+          <div class="footer-top">
+            <h2>STRINGHUB</h2>
+            <p>Nơi phân phối nhạc cụ chất lượng cao</p>
+          </div>
+
+          <div class="footer-content">
+            <div>
+              <h4>Về chúng tôi</h4>
+              <p>
+                Chúng tôi là một công ty chuyên bán nhạc cụ với chất lượng cao
+                và dịch vụ tốt nhất.
+              </p>
+            </div>
+
+            <div>
+              <h4>Liên hệ</h4>
+              <p>0705567593</p>
+            </div>
+
+            <div>
+              <h4>Địa chỉ</h4>
+              <p>Hẻm 355 ,Phú Hòa Đông ,Củ Chi ,Tp HCM</p>
+            </div>
+
+            <div>
+              <h4>MXH</h4>
+              <a href="https://www.facebook.com" target="_blank">Facebook</a
+              ><br />
+              <a href="https://www.instagram.com" target="_blank">Instagram</a>
+            </div>
+            <div class="footer-bottom">
+              <a href="/html/contact.html">CONTACT</a>
+              <a href="/html/report.html">REPORT</a>
+              <a href="/html/suggest.html">SUGGEST</a>
+              <a href="/html/feedback.html">FEEDBACK</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+</body>
+</html>
+
+
+</body>
+</html>
