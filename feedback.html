@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Feedback | stringhub</title>
+</head>
+<body>
+<h2>⭐ Phản hồi khách hàng</h2>
+
+<form onsubmit="sendFeedback(event)">
+  <label>Mức độ hài lòng:</label>
+  <select>
+    <option>⭐⭐⭐⭐⭐ Rất tốt</option>
+    <option>⭐⭐⭐⭐ Tốt</option>
+    <option>⭐⭐ Bình thường</option>
+    <option>⭐ Chưa hài lòng</option>
+  </select>
+
+  <label>Nhận xét:</label>
+  <textarea required></textarea>
+
+  <button type="submit">Gửi feedback</button>
+</form>
+
+<script>
+function sendFeedback(e){
+  e.preventDefault();
+  alert("❤️ Stringhub đã nhận được feedback của bạn!");
+}
+</script>
+</body>
+</html>

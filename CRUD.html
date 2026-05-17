@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>stringhub panel</title>
+    <link rel="stylesheet" href="/css/admin.css" />
+
+  </head>
+  <body>
+    <main class="admin-container">
+      <!-- FORM -->
+      <section class="card">
+        <h2 id="formTitle">Thêm sản phẩm</h2>
+
+        <form id="productForm">
+          <div class="form-group">
+            <label>Tên sản phẩm</label>
+            <input id="name" type="text" required />
+          </div>
+
+          <div class="form-group">
+            <label>Giá</label>
+            <input id="price" type="number" required />
+          </div>
+
+          <div class="form-group">
+            <label>Mô tả</label>
+            <textarea id="description"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label>Danh mục</label>
+            <select id="category" required>
+              <option value="">-- Chọn danh mục --</option>
+              <option value="piano-organ">piano-organ</option>
+              <option value="piano-dien">piano-dien</option>
+              <option value="piano-co">piano-co</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Ảnh</label>
+            <input id="imageFile" type="file" />
+            <input id="imageUrl" type="text" placeholder="Hoặc dán URL ảnh" />
+          </div>
+
+          <img id="previewImage" class="preview hidden" />
+
+          <div class="button-row">
+            <button type="submit" class="btn">Lưu</button>
+            <button
+              type="button"
+              id="btnCancelEdit"
+              class="btn btn-outline hidden"
+            >
+              Huỷ
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <!-- LIST PRODUCT -->
+      <section class="card">
+        <h2>Danh sách sản phẩm</h2>
+        <div id="productList" class="product-list"></div>
+      </section>
+
+      <script type="module" src="/js/CRUD.js"></script>
+    </main>
+  </body>
+</html>

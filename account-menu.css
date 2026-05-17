@@ -1,0 +1,72 @@
+.account-menu {
+  position: relative;
+}
+
+#accountBtn {
+  background: white;
+
+  border: 1px solid #ccc;
+  border-radius: 10px;
+
+  padding: 10px 16px;
+
+  cursor: pointer;
+
+  font-size: 14px;
+
+  transition: 0.2s;
+}
+
+#accountBtn:hover {
+  background: #f2f2f2;
+}
+
+.dropdown {
+  position: absolute;
+
+  top: 110%;
+  right: 0;
+
+  width: 200px;
+
+  background: white;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 10px 25px rgba(0,0,0,0.12);
+
+  overflow: hidden;
+
+  z-index: 999;
+}
+
+.dropdown a,
+.dropdown button {
+  width: 100%;
+
+  padding: 14px;
+
+  border: none;
+  background: white;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  font-size: 14px;
+
+  display: block;
+
+  text-decoration: none;
+  color: black;
+}
+
+.dropdown a:hover,
+.dropdown button:hover {
+  background: #f5f5f5;
+}
+
+.hidden {
+  display: none !important;
+}
